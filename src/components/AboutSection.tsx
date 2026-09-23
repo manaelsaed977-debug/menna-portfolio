@@ -86,7 +86,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenResume, onOpen
               {/* Core Bio from User Persona */}
               <div className="space-y-4 text-sm sm:text-base text-neutral-300 leading-relaxed font-sans">
                 <p>
-                  I am a 20-year-old Computer Science student at the Faculty of Computers and Information. I am a passionate coder and software engineering enthusiast, and I practice Karate which taught me discipline, focus, and resilience under pressure.
+                  I am a 20-year-old Computer Science student at the Faculty of Computers and Information. I am a passionate coder, robotics &amp; IoT developer, and I practice Karate which taught me discipline, focus, and resilience under pressure.
                 </p>
                 <div className="p-4 rounded-xl bg-blue-950/20 border-l-2 border-blue-500 text-blue-200 font-syne font-semibold text-base sm:text-lg">
                   &ldquo;I find my discipline in karate, my calm in black and quiet code, and my purpose in powering the future of energy with AI.&rdquo;

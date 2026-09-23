@@ -28,7 +28,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenResume, onOpenTerminal }) 
                 MENNA SABAH
               </div>
               <div className="text-[11px] text-neutral-500">
-                AI Software Engineer · Energy Sector Intelligence
+                AI &amp; Robotics Engineer · Energy Sector Intelligence
               </div>
             </div>
           </div>
@@ -53,7 +53,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenResume, onOpenTerminal }) 
               Projects
             </a>
             <a href="#simulator" className="hover:text-white transition-colors">
-              Rig Simulator
+              Fleet Simulator
             </a>
             <a href="#about" className="hover:text-white transition-colors">
               About

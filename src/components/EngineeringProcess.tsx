@@ -5,7 +5,7 @@ import { Shield, ArrowUpRight, Flame, Target, Award, Zap, Activity, Volume2, Vol
 export const EngineeringProcess: React.FC = () => {
   const [trainingMode, setTrainingMode] = useState<'kata' | 'kumite' | 'focus'>('kata');
   const [isStriking, setIsStriking] = useState(false);
-  const [soundEnabled, setSoundEnabled] = useState(true);
+  const [soundEnabled, setSoundEnabled] = useState(false);
   const [autoTrain, setAutoTrain] = useState(true);
   const [strikeCount, setStrikeCount] = useState(14);
   const [stanceBreath, setStanceBreath] = useState<'inhale' | 'exhale'>('inhale');

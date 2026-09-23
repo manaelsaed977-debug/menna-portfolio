@@ -10,7 +10,7 @@ export interface Project {
     value: string;
   }[];
   techStack: string[];
-  category: 'Anomaly Detection' | 'Predictive Maintenance' | 'Drilling Optimization' | 'HSE Safety';
+  category: 'Anomaly Detection' | 'Predictive Maintenance' | 'Drilling Optimization' | 'HSE Safety' | 'Robotics & IoT';
   featured: boolean;
   demoData?: {
     anomalyType: string;
@@ -28,7 +28,7 @@ export interface ProcessStep {
 
 export interface ToolItem {
   name: string;
-  category: 'AI & Machine Learning' | 'Industrial Systems & IoT' | 'Core Engineering' | 'Data Infrastructure';
+  category: 'AI & Machine Learning' | 'Robotics & Autonomous Systems' | 'Petroleum Industrial IoT' | 'Data Infrastructure' | 'Core Engineering' | 'Industrial Systems & IoT';
   level: string;
   desc: string;
   iconName: string;

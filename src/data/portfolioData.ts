@@ -13,28 +13,28 @@ export const PORTFOLIO_INFO = {
   tagline: 'I find my discipline in karate, my calm in black and quiet code, and my purpose in powering the future of energy with AI.',
   subtext: 'Integrating machine learning into deepwater drilling and subsea engineering to eliminate catastrophic downtime and optimize Egyptian oil & gas production.',
   karateBackground: 'Karate Practitioner · Black Belt Mindset (Discipline, Resilience, Focused Precision)',
-  bio: `I am Menna Sabah, a 20-year-old Computer Science student at the Faculty of Computers and Information. I am a passionate coder and software engineering enthusiast, and I practice Karate which taught me discipline, focus, and resilience under pressure.
+  bio: `I am Menna Sabah, a 20-year-old Computer Science student at the Faculty of Computers and Information. I am a passionate coder, robotics & IoT developer, and I practice Karate which taught me discipline, focus, and resilience under pressure.
 
-My vision is to bridge cutting-edge Artificial Intelligence with Egypt's vital petroleum and energy infrastructure. I design intelligent architectures for predictive maintenance, drilling optimization, and safety enhancement tailored for industry leaders like ENPPI, PETROJET, BP, and Eni.
+My vision is to integrate Artificial Intelligence with Electronics & Mechanics (Robotics) into the petroleum sector. I build intelligent robots, self-driving rovers and IoT devices for predictive maintenance and pipeline inspection for companies like ENPPI, PETROJET, BP, and Eni.
 
 I find my discipline in karate, my calm in black and quiet code, and my purpose in powering the future of energy with AI. By applying deep learning and real-time streaming analytics to high-frequency sensor streams, I build systems that detect offshore drilling anomalies before blowouts occur and forecast subsea component fatigue to avert multi-million dollar operational halts.`
 };
 
 export const FEATURED_PROJECTS: Project[] = [
   {
-    id: 'rig-pulse',
+    id: 'pipe-bot',
     number: '01',
-    title: 'RIG-PULSE AI',
-    subtitle: 'Offshore Drilling Real-Time Anomaly & Kick Detection',
-    description: 'High-frequency SCADA sensor ingestion system utilizing temporal transformers and autoencoders to detect drilling bit vibrations, abnormal torque spikes, and influx gas kicks 38 seconds prior to conventional thresholds.',
-    targetIndustry: ['ENPPI', 'BP', 'Eni (Zohr Field)'],
+    title: 'PIPE-BOT INSPECTOR',
+    subtitle: 'Autonomous IoT Pipeline Inspection Robot',
+    description: 'Intelligent self-driving robot equipped with ultrasonic sensors, LiDAR and thermal cameras for internal pipeline inspection, crack detection and corrosion monitoring. Built with ESP32, ROS2 and Edge AI for real-time anomaly detection in ENPPI & PETROJET pipelines, reducing manual inspection risks.',
+    targetIndustry: ['ENPPI', 'PETROJET', 'BP', 'Eni'],
     metrics: [
-      { label: 'Detection Speed', value: '38s Ahead' },
-      { label: 'False Alarm Rate', value: '< 0.08%' },
-      { label: 'Inference Latency', value: '14ms Edge' }
+      { label: 'Defect Detection', value: '99.4% Acc.' },
+      { label: 'Inspection Speed', value: '1.2 m/s' },
+      { label: 'Inference Latency', value: '12ms Edge' }
     ],
-    techStack: ['PyTorch', 'Temporal Transformers', 'Kafka', 'FastAPI', 'Rust Edge Agent'],
-    category: 'Anomaly Detection',
+    techStack: ['ESP32', 'ROS2', 'Edge AI', 'Ultrasonic Sensors', 'LiDAR & Thermal', 'FastAPI'],
+    category: 'Robotics & IoT',
     featured: true,
     demoData: {
       anomalyType: 'Gas Kick / Differential Sticking',
@@ -48,19 +48,19 @@ export const FEATURED_PROJECTS: Project[] = [
     }
   },
   {
-    id: 'subsea-predict',
+    id: 'desert-rover',
     number: '02',
-    title: 'SUBSEA PREDICT-X',
-    subtitle: 'Deepwater Subsea Manifold & Valve Degradation Engine',
-    description: 'Predictive maintenance neural engine modeling cavitation damage, elastomer seal degradation, and multiphase choke wear in high-pressure Mediterranean subsea production trees.',
-    targetIndustry: ['PETROJET', 'Eni', 'BP'],
+    title: 'DESERT-ROVER X',
+    subtitle: 'Autonomous Rover for Oil Field Safety & Inspection',
+    description: '4WD self-driving rover with AI vision, gas sensors and IoT connectivity for autonomous patrolling of petroleum sites, detecting gas leaks, fire hazards and equipment overheating. Uses SLAM navigation, ESP32-CAM and predictive maintenance AI for Eni Zohr Field and BP sites.',
+    targetIndustry: ['Eni (Zohr Field)', 'BP', 'PETROJET'],
     metrics: [
-      { label: 'Downtime Averted', value: 'Est. $4.2M/yr' },
-      { label: 'RUL Prediction Acc.', value: '94.8%' },
-      { label: 'Sensor Sampling', value: '1,000 Hz' }
+      { label: 'Hazard Detection', value: '< 1.5s' },
+      { label: 'Patrol Coverage', value: '24/7 Auto' },
+      { label: 'Battery Autonomy', value: '8.5 Hours' }
     ],
-    techStack: ['LSTM-Autoencoders', 'TimescaleDB', 'Python', 'Docker', 'SCADA Ingestion'],
-    category: 'Predictive Maintenance',
+    techStack: ['SLAM Navigation', 'ESP32-CAM', 'ROS2', 'Gas & Thermal Sensors', 'Edge AI', 'IoT Telemetry'],
+    category: 'Robotics & IoT',
     featured: true,
     demoData: {
       anomalyType: 'Hydraulic Seal Micro-Leakage',
@@ -74,19 +74,19 @@ export const FEATURED_PROJECTS: Project[] = [
     }
   },
   {
-    id: 'petro-optim',
+    id: 'drill-bot',
     number: '03',
-    title: 'PETRO-OPTIM ROP',
-    subtitle: 'Autonomous Rate of Penetration Optimizer & Lithology Classifier',
-    description: 'Reinforcement learning controller paired with convolutional lithology classification from gamma-ray logs, dynamically tuning Weight-on-Bit (WOB) and rotational speeds to maximize drilling speed while preserving bit longevity.',
+    title: 'DRILL-BOT ARM',
+    subtitle: 'Robotic Arm for Autonomous Drilling Control',
+    description: 'Intelligent 6-axis robotic arm powered by reinforcement learning and computer vision for autonomous control of drilling parameters. The robot dynamically adjusts Weight-on-Bit (WOB) and rotational speeds, uses gamma-ray log lithology classification, and performs automated tool changing, reducing human intervention in hazardous drilling zones.',
     targetIndustry: ['ENPPI', 'PETROJET', 'Egyptian General Petroleum Corp'],
     metrics: [
       { label: 'Penetration Speed', value: '+26% ROP' },
       { label: 'Bit Wear Reduction', value: '-31%' },
-      { label: 'Formations Mapped', value: '18 Egyptian Basins' }
+      { label: 'Autonomy Level', value: '100% Autonomous Control' }
     ],
-    techStack: ['Deep RL (PPO)', 'PyTorch', 'SciPy', 'OpenVINO', 'React Dashboard'],
-    category: 'Drilling Optimization',
+    techStack: ['Robotic Arm', 'ROS2', 'Computer Vision', 'Deep RL (PPO)', 'PyTorch', 'SciPy', 'OpenVINO', 'React Dashboard'],
+    category: 'Robotics & IoT',
     featured: true,
     demoData: {
       anomalyType: 'Hard Chert Interbed Encounter',
@@ -100,19 +100,19 @@ export const FEATURED_PROJECTS: Project[] = [
     }
   },
   {
-    id: 'kata-shin',
+    id: 'hse-patrol-bot',
     number: '04',
-    title: 'KATA-SHIN SAFEGUARD',
-    subtitle: 'Offshore Rig Deck Computer Vision HSE & Zone Surveillance',
-    description: 'Edge-deployed computer vision model running on ruggedized rig cameras. Monitors red-zone encroachment around the rotary table and pipe-racking arms, detecting missing PPE and hazardous gas exposure threats in real time.',
+    title: 'HSE PATROL-BOT',
+    subtitle: 'Mobile Safety Robot for Offshore Rigs',
+    description: 'Autonomous mobile robot patrolling offshore rig decks for HSE safety enforcement. Deploys 360-degree cameras and LiDAR for red-zone encroachment detection around rotary table and pipe-racking arms. Uses YOLOv10 on NVIDIA Jetson for real-time PPE detection, fall detection, and hazardous gas exposure alerts, replacing fixed cameras with active robotic patrol.',
     targetIndustry: ['PETROJET', 'ENPPI', 'Offshore Rig Contractors'],
     metrics: [
       { label: 'Detection Speed', value: '45 FPS' },
       { label: 'Red-Zone Violations', value: 'Zero Breaches' },
       { label: 'Edge Footprint', value: '< 18W Jetson' }
     ],
-    techStack: ['YOLOv10', 'ONNX Runtime', 'NVIDIA Jetson', 'WebSockets', 'Tailwind'],
-    category: 'HSE Safety',
+    techStack: ['YOLOv10', 'ONNX Runtime', 'NVIDIA Jetson', 'WebSockets', 'Tailwind', 'Mobile Robot', 'ROS2 Navigation', 'Autonomous Patrol'],
+    category: 'Robotics & IoT',
     featured: true
   }
 ];
@@ -121,36 +121,36 @@ export const PROCESS_STEPS: ProcessStep[] = [
   {
     number: '01',
     phase: 'SENSING & TELEMETRY',
-    title: 'High-Frequency Ingestion',
-    description: 'Ingesting noisy industrial telemetry (WITSML, OPC-UA, Modbus) across mud pressure, rotary torque, acoustic vibrations, and temperature.',
+    title: 'High-Frequency AI Sensing (Robotics + WITSML)',
+    description: 'Ingesting noisy telemetry via AI & Robotics (WITSML, ROS2, OPC-UA, Modbus) across mud pressure, rotary torque, LIDAR, IMU, and autonomous rig sensors.',
     karatePrinciple: 'Mizu no Kokoro (Mind like Water): Observing raw incoming signals with unclouded, calm clarity.'
   },
   {
     number: '02',
     phase: 'ANOMALY MODELING',
-    title: 'Temporal Machine Learning',
-    description: 'Architecting unsupervised autoencoders and bidirectional sequence models to recognize subtle deviations long before deterministic alarm thresholds trip.',
+    title: 'Temporal Machine Learning - Robotic Anomaly Detection',
+    description: 'Architecting unsupervised autoencoders and robotic fleet models to predict petroleum rig failures long before deterministic alarms trip - AI + Robotics Early Warning System.',
     karatePrinciple: 'Zanshin (Total Alertness): Vigilance that anticipates friction and structural shifts before they manifest.'
   },
   {
     number: '03',
     phase: 'DISCIPLINE & RIGOR',
     title: 'Quiet Code Architecture',
-    description: 'Writing deterministic, zero-dependency, ultra-tested code. Industrial operations leave zero room for unhandled exceptions or memory leaks.',
+    description: 'Writing deterministic, zero-dependency, ultra-tested AI & Robotics code for autonomous petroleum rigs. Industrial robotics leaves zero room for unhandled exceptions.',
     karatePrinciple: 'Kata (Flawless Repetition): Repeated perfection of software fundamentals until execution becomes instinctual.'
   },
   {
     number: '04',
     phase: 'EDGE ORCHESTRATION',
-    title: 'Sub-20ms Inference',
-    description: 'Quantizing models with TensorRT and ONNX for harsh offshore rig server racks with intermittent satellite uplink.',
+    title: 'Sub-20ms Robotic Inference',
+    description: 'Quantizing AI models with TensorRT and ONNX for harsh offshore robotic rig servers and autonomous robots with intermittent satellite uplink.',
     karatePrinciple: 'Kime (Decisive Focus): Delivering maximum algorithmic power at the precise split-second of need.'
   },
   {
     number: '05',
     phase: 'FIELD INTEGRATION',
-    title: 'Engineer Mission Control',
-    description: 'Delivering intuitive, mission-critical operator consoles for drillers and maintenance supervisors at ENPPI, PETROJET, BP, and Eni.',
+    title: 'Engineer Robotic Mission Control',
+    description: 'Delivering intuitive, AI-powered mission-critical robotic operator consoles for autonomous drillers and robot fleet supervisors at ENPPI, PETROJET, BP, and Eni.',
     karatePrinciple: 'Rei (Mutual Respect & Service): Building software that protects human lives and national infrastructure.'
   }
 ];
@@ -158,14 +158,19 @@ export const PROCESS_STEPS: ProcessStep[] = [
 export const TOOLS_DATA: ToolItem[] = [
   { name: 'PyTorch & Transformers', category: 'AI & Machine Learning', level: 'Advanced', desc: 'Time-series forecasting, LSTM autoencoders, anomaly scoring', iconName: 'BrainCircuit' },
   { name: 'Python 3.12 / NumPy', category: 'AI & Machine Learning', level: 'Expert', desc: 'Mathematical modeling, telemetry signal filtering (FFT/Wavelets)', iconName: 'Terminal' },
-  { name: 'C++ & Low-Level Systems', category: 'Core Engineering', level: 'Proficient', desc: 'Real-time rig telemetry parsers and edge buffer management', iconName: 'Cpu' },
-  { name: 'FastAPI & Microservices', category: 'Core Engineering', level: 'Advanced', desc: 'Asynchronous event streaming and industrial API gateways', iconName: 'Zap' },
+  { name: 'ONNX / TensorRT', category: 'AI & Machine Learning', level: 'Advanced', desc: 'Model quantization and sub-20ms edge inference optimization', iconName: 'Gauge' },
+  { name: 'ROS2 & Nav2', category: 'Robotics & Autonomous Systems', level: 'Expert', desc: 'Autonomous navigation stack for robotic rig inspection and fleet control', iconName: 'Bot' },
+  { name: 'NVIDIA Isaac Sim & Gazebo', category: 'Robotics & Autonomous Systems', level: 'Advanced', desc: 'Digital twin simulation for petroleum robots in offshore rigs', iconName: 'Box' },
+  { name: 'OpenCV / YOLOv8 & LIDAR SLAM', category: 'Robotics & Autonomous Systems', level: 'Expert', desc: 'Real-time object detection, SLAM for autonomous rig robots', iconName: 'Scan' },
+  { name: 'NVIDIA Jetson & Edge TPU', category: 'Robotics & Autonomous Systems', level: 'Advanced', desc: 'Deploying AI models on autonomous robots in harsh offshore environments', iconName: 'Cpu' },
+  { name: 'Unity Digital Twin & Control', category: 'Robotics & Autonomous Systems', level: 'Advanced', desc: 'Real-time 3D mission control for robotic fleet visualization', iconName: 'Layers' },
+  { name: 'C++ & Low-Level Systems', category: 'Petroleum Industrial IoT', level: 'Proficient', desc: 'Real-time rig telemetry parsers and edge buffer management', iconName: 'Cpu' },
+  { name: 'FastAPI & Microservices', category: 'Petroleum Industrial IoT', level: 'Advanced', desc: 'Asynchronous event streaming and industrial API gateways', iconName: 'Zap' },
+  { name: 'Docker & Linux Edge', category: 'Petroleum Industrial IoT', level: 'Advanced', desc: 'Containerized deployment for ruggedized offshore hardware', iconName: 'Container' },
+  { name: 'React & TypeScript', category: 'Petroleum Industrial IoT', level: 'Advanced', desc: 'Real-time telemetry HUDs, mission dashboards', iconName: 'Layers' },
+  { name: 'WITSML & SCADA Standard', category: 'Petroleum Industrial IoT', level: 'Domain Specialization', desc: 'Petroleum industry wellsite data transfer & instrumentation', iconName: 'Activity' },
   { name: 'Apache Kafka & MQTT', category: 'Data Infrastructure', level: 'Proficient', desc: 'Distributed event bus for 10,000+ sensor updates per second', iconName: 'Radio' },
-  { name: 'TimescaleDB & SQL', category: 'Data Infrastructure', level: 'Advanced', desc: 'High-density time-series persistence and continuous aggregates', iconName: 'Database' },
-  { name: 'Docker & Linux Edge', category: 'Industrial Systems & IoT', level: 'Advanced', desc: 'Containerized deployment for ruggedized offshore hardware', iconName: 'Container' },
-  { name: 'React & TypeScript', category: 'Core Engineering', level: 'Advanced', desc: 'Real-time telemetry HUDs, SVG wave viewers, mission dashboards', iconName: 'Layers' },
-  { name: 'WITSML & SCADA Standard', category: 'Industrial Systems & IoT', level: 'Domain Specialization', desc: 'Petroleum industry wellsite data transfer & instrumentation', iconName: 'Activity' },
-  { name: 'ONNX / TensorRT', category: 'AI & Machine Learning', level: 'Advanced', desc: 'Model quantization and sub-20ms edge inference optimization', iconName: 'Gauge' }
+  { name: 'TimescaleDB & SQL', category: 'Data Infrastructure', level: 'Advanced', desc: 'High-density time-series persistence', iconName: 'Database' }
 ];
 
 export const METRIC_STATS: MetricStat[] = [

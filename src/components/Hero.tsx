@@ -44,7 +44,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal, onOpenResume }) => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
-            <span className="text-neutral-200 font-medium tracking-wide">AI SOFTWARE ENGINEER | ENERGY INTELLIGENCE</span>
+            <span className="text-neutral-200 font-medium tracking-wide">AI & ROBOTICS ENGINEER | ENERGY INTELLIGENCE</span>
           </div>
 
           {/* Location & Coordinates */}
@@ -95,10 +95,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal, onOpenResume }) => {
               </p>
               <div className="space-y-1 pt-1 max-w-2xl">
                 <p className="text-sm sm:text-base text-blue-400 font-mono-tech font-semibold tracking-wide">
-                  AI Engineer | Programmer | Karate Athlete.
+                  AI &amp; Robotics Engineer | IoT Developer | Karate Athlete.
                 </p>
                 <p className="text-sm sm:text-base text-neutral-300 leading-relaxed">
-                  Building intelligent systems for predictive maintenance, drilling anomaly detection, and safety automation &mdash; bridging FCI Cairo with Egypt&apos;s energy leaders: <span className="text-white font-medium">ENPPI</span>, <span className="text-white font-medium">PETROJET</span>, <span className="text-white font-medium">BP</span> &amp; <span className="text-white font-medium">Eni</span>.
+                  Building intelligent robots, IoT devices &amp; self-driving inspection systems for pipeline inspection, predictive maintenance, and safety automation &mdash; bridging FCI Cairo with Egypt&apos;s energy leaders: <span className="text-white font-medium">ENPPI</span>, <span className="text-white font-medium">PETROJET</span>, <span className="text-white font-medium">BP</span> &amp; <span className="text-white font-medium">Eni</span>.
                 </p>
               </div>
             </div>
@@ -185,7 +185,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal, onOpenResume }) => {
                   {/* Background Portrait Image */}
                   <img
                     src="/menna-portrait.jpg"
-                    alt="Menna Sabah - AI Software Engineer & Energy Intelligence"
+                    alt="Menna Sabah - AI & Robotics Engineer & Energy Intelligence"
                     className={`absolute inset-0 w-full h-full object-cover object-top filter transition-all duration-700 ease-out ${
                       isTextMoved 
                         ? 'brightness-105 contrast-110 scale-100' 
@@ -262,7 +262,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal, onOpenResume }) => {
                           <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
                         </div>
                         <div className="text-[10px] font-mono-tech text-blue-400 uppercase tracking-wider">
-                          AI & Energy Architect · FCI Cairo
+                          AI &amp; Robotics Architect - FCI Cairo
                         </div>
                       </div>
                     </div>
@@ -274,11 +274,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal, onOpenResume }) => {
                       </p>
                       
                       <p className="text-neutral-300">
-                        I am a passionate coder and a software engineering enthusiast, and I practice Karate which taught me discipline, focus, and resilience.
+                        I am a passionate coder, robotics &amp; IoT developer, and I practice Karate which taught me discipline, focus, and resilience.
                       </p>
                       
                       <p className="text-neutral-300">
-                        My vision is to integrate Artificial Intelligence into the petroleum and energy sector in Egypt. I aspire to build intelligent systems for predictive maintenance, drilling optimization, and safety enhancement for companies like <span className="text-blue-400 font-semibold">ENPPI</span>, <span className="text-blue-400 font-semibold">PETROJET</span>, <span className="text-blue-400 font-semibold">BP</span>, and <span className="text-blue-400 font-semibold">Eni</span>.
+                        My vision is to integrate Artificial Intelligence with Electronics &amp; Mechanics (Robotics) into the petroleum sector. I build intelligent robots, self-driving rovers and IoT devices for predictive maintenance and pipeline inspection for companies like <span className="text-blue-400 font-semibold">ENPPI</span>, <span className="text-blue-400 font-semibold">PETROJET</span>, <span className="text-blue-400 font-semibold">BP</span>, and <span className="text-blue-400 font-semibold">Eni</span>.
                       </p>
 
                       {/* Highlighted Quote in Blue */}
@@ -340,11 +340,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal, onOpenResume }) => {
           <span>0% DOWNTIME TOLERANCE</span>
         </div>
         <div className="flex items-center gap-3 text-neutral-500">
-          <span>REAL-TIME SCADA SENSORS</span>
+          <span>REAL TIME ROBOTICS</span>
           <span>•</span>
-          <span>SUBSEA ANOMALY DETECTORS</span>
+          <span>IoT PIPELINE INSPECTION</span>
           <span>•</span>
-          <span>DRILLING OPTIMIZATION</span>
+          <span>AUTONOMOUS ROVER SYSTEMS</span>
         </div>
       </div>
 

@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { TOOLS_DATA } from '../data/portfolioData';
 import { 
-  Terminal, Cpu, Zap, Radio, Database, Container, Layers, Activity, Gauge, BrainCircuit, Filter
+  Terminal, Cpu, Zap, Radio, Database, Container, Layers, Activity, Gauge, BrainCircuit, Bot, Scan, Box
 } from 'lucide-react';
 
 export const ToolsSection: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>('All');
 
-  const categories = ['All', 'AI & Machine Learning', 'Industrial Systems & IoT', 'Core Engineering', 'Data Infrastructure'];
+  const categories = ['All', 'AI & Machine Learning', 'Robotics & Autonomous Systems', 'Petroleum Industrial IoT', 'Data Infrastructure'];
 
   const filteredTools = activeCategory === 'All'
     ? TOOLS_DATA
@@ -25,6 +25,9 @@ export const ToolsSection: React.FC = () => {
       case 'Layers': return <Layers className="w-5 h-5 text-blue-400" />;
       case 'Activity': return <Activity className="w-5 h-5 text-blue-400" />;
       case 'Gauge': return <Gauge className="w-5 h-5 text-blue-400" />;
+      case 'Bot': return <Bot className="w-5 h-5 text-blue-400" />;
+      case 'Box': return <Box className="w-5 h-5 text-blue-400" />;
+      case 'Scan': return <Scan className="w-5 h-5 text-blue-400" />;
       default: return <Cpu className="w-5 h-5 text-blue-400" />;
     }
   };
@@ -40,9 +43,9 @@ export const ToolsSection: React.FC = () => {
               <Cpu className="w-4 h-4 text-blue-400" />
               <span>PRODUCTION ARSENAL</span>
             </div>
-            <h2 className="font-syne font-extrabold text-3xl sm:text-5xl text-white tracking-tight flex items-center gap-3">
-              <span>TOOLS</span>
-              <span className="text-blue-500">I USE</span>
+            <h2 className="font-syne font-extrabold text-3xl sm:text-5xl text-white tracking-tight flex items-center gap-2">
+              <span>TOOLS I</span>
+              <span className="text-sky-400">USE</span>
             </h2>
           </div>
           

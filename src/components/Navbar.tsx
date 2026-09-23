@@ -48,7 +48,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenTerminal }) 
                   MENNA SABAH
                 </span>
                 <span className="text-[10px] font-mono-tech uppercase px-1.5 py-0.5 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20 hidden sm:inline-block">
-                  AI · Energy
+                  AI &amp; ROBOTICS
                 </span>
               </div>
               <p className="text-[11px] text-neutral-400 font-mono-tech hidden md:block">
@@ -70,7 +70,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenTerminal }) 
               className="px-3 py-1.5 rounded-md hover:text-blue-400 hover:bg-blue-500/5 transition-colors flex items-center gap-1 text-blue-400/90 font-medium"
             >
               <Activity className="w-3.5 h-3.5 text-blue-400" />
-              02.RIG SIMULATOR
+              02.ROBOT SIMULATOR
             </a>
             <a 
               href="#process" 
@@ -156,7 +156,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenTerminal }) 
                 onClick={() => setMobileMenuOpen(false)}
                 className="py-2 px-3 rounded bg-blue-600/10 border border-blue-500/20 text-blue-400 font-medium"
               >
-                02. RIG ANOMALY SIMULATOR
+                02. ROBOT FLEET SIMULATOR
               </a>
               <a 
                 href="#process" 

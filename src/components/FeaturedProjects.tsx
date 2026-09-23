@@ -140,7 +140,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ onSelectProj
               <div className="flex items-center gap-3">
                 <span className="font-syne font-extrabold text-3xl text-blue-500">04</span>
                 <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono-tech text-xs">
-                  HSE RIG SAFETY & COMPUTER VISION
+                  HSE RIG SAFETY &amp; COMPUTER VISION &amp; MOBILE ROBOTICS
                 </span>
               </div>
               <h3 className="font-syne font-bold text-2xl text-white">
@@ -167,7 +167,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ onSelectProj
                 onClick={() => setSelectedProject(FEATURED_PROJECTS[3])}
                 className="w-full sm:w-auto px-5 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-syne font-bold text-xs tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-blue-600/30 transition-all cursor-pointer"
               >
-                <span>INSPECT SAFETY SPECS</span>
+                <span>INSPECT ROBOT SPECS</span>
                 <ArrowUpRight className="w-4 h-4" />
               </button>
             </div>

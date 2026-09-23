@@ -26,15 +26,18 @@ I find my discipline in karate, my calm in black and quiet code, and my purpose 
 Specializing in integrating Artificial Intelligence into Egypt's petroleum and energy sector. Designing intelligent systems for predictive maintenance, drilling optimization, and safety enhancement for ENPPI, PETROJET, BP, and Eni.
 
 FEATURED PROJECTS:
-1. RIG-PULSE AI: Real-Time Offshore Drilling Anomaly Detection
-   - High-frequency sensor ingestion using temporal transformers for kick & vibration detection.
-   - Lead time: 38s ahead of blowout thresholds with <0.08% false alarm rate.
-2. SUBSEA PREDICT-X: Deepwater Subsea Manifold Predictive Engine
-   - Valve degradation & cavitation forecasting to minimize multi-million dollar downtime.
-3. PETRO-OPTIM ROP: AI Rate-of-Penetration & Lithology Classifier
-   - Deep RL model maximizing drilling penetration while extending bit lifecycle.
-4. KATA-SHIN SAFEGUARD: Rig Deck Computer Vision HSE & Zone Surveillance
-   - Edge-deployed YOLO red-zone and PPE monitoring at 45 FPS.
+1. PIPE-BOT INSPECTOR: Autonomous IoT Pipeline Inspection Robot
+   - Intelligent self-driving robot with ultrasonic, LiDAR & thermal cameras for pipeline inspection.
+   - Built with ESP32, ROS2 and Edge AI for real-time anomaly detection for ENPPI & PETROJET.
+2. DESERT-ROVER X: Autonomous Rover for Oil Field Safety & Inspection
+   - 4WD self-driving rover with AI vision, gas sensors, SLAM and IoT connectivity for autonomous patrolling.
+   - Real-time hazard & leak detection for Eni Zohr Field & BP sites.
+3. DRILL-BOT ARM: Robotic Arm for Autonomous Drilling Control
+   - 6-axis robotic arm with Deep RL, ROS2 & computer vision for autonomous drilling & tool changing.
+   - +26% ROP, -31% bit wear, and 100% autonomous control.
+4. HSE PATROL-BOT: Mobile Safety Robot for Offshore Rigs
+   - Autonomous mobile robot with 360-degree cameras, LiDAR, YOLOv10 on Jetson for active rig patrol.
+   - Real-time PPE, fall detection, red-zone encroachment & gas exposure surveillance.
 
 TECHNICAL PROFICIENCIES:
 - Languages: Python, C++, TypeScript, SQL, Rust (Basics)

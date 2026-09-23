@@ -15,7 +15,7 @@ export const AnomalySimulator: React.FC = () => {
     pressure: 3100,
     torque: 16.5,
     mudFlow: 650,
-    vibration: 1.4
+    vibration: 0.94
   });
 
   const [activeScenario, setActiveScenario] = useState<'nominal' | 'gas_kick' | 'stick_slip' | 'choke_cavitation'>('nominal');
@@ -27,26 +27,26 @@ export const AnomalySimulator: React.FC = () => {
     let score = 0;
     const anomalies: string[] = [];
 
-    // Gas kick risk: pressure deviation combined with sudden flow mismatch
+    // Gas leak emergency
     if (t.pressure > 4200 || t.pressure < 2200) {
       score += 45;
-      anomalies.push('Abnormal Standpipe Pressure Gradient (Gas Kick Risk)');
+      anomalies.push('Hazardous Gas Concentration Spike / Leak Detected');
     }
 
-    // Stick-slip: high vibration & torque fluctuations
+    // Navigation failure / obstacle stuck
     if (t.vibration > 3.5) {
       score += 35;
-      anomalies.push('Harmonic Axial Stick-Slip Vibration Detected');
+      anomalies.push('SLAM Odometry Loss & Drive Motor Stalling Hazard');
     }
 
     if (t.torque > 28.0) {
       score += 25;
-      anomalies.push('Torque Spike: Drill Bit Stalling Hazard');
+      anomalies.push('High Obstacle Resistance: Rover Path Blocked');
     }
 
     if (t.mudFlow < 450 || t.mudFlow > 820) {
       score += 20;
-      anomalies.push('Drilling Fluid Inflow Mismatch');
+      anomalies.push('Thermal Sensor Anomaly & Optical Lens Degradation');
     }
 
     const clampedScore = Math.min(100, Math.max(2, score));
@@ -91,7 +91,7 @@ export const AnomalySimulator: React.FC = () => {
   const applyScenario = (scenario: 'nominal' | 'gas_kick' | 'stick_slip' | 'choke_cavitation') => {
     setActiveScenario(scenario);
     if (scenario === 'nominal') {
-      setTelemetry({ rpm: 120, pressure: 3100, torque: 16.5, mudFlow: 650, vibration: 1.4 });
+      setTelemetry({ rpm: 120, pressure: 3100, torque: 16.5, mudFlow: 650, vibration: 0.94 });
     } else if (scenario === 'gas_kick') {
       setTelemetry({ rpm: 135, pressure: 4680, torque: 24.2, mudFlow: 380, vibration: 2.8 });
     } else if (scenario === 'stick_slip') {
@@ -110,15 +110,15 @@ export const AnomalySimulator: React.FC = () => {
           <div>
             <div className="flex items-center gap-2 text-blue-400 font-mono-tech text-xs tracking-widest uppercase mb-2">
               <Activity className="w-4 h-4 text-blue-400 animate-pulse" />
-              <span>LIVE INDUSTRIAL DIGITAL TWIN</span>
+              <span>LIVE ROBOTICS DIGITAL TWIN &amp; FLEET MANAGEMENT</span>
             </div>
             <h2 className="font-syne font-extrabold text-3xl sm:text-5xl text-white tracking-tight flex items-center gap-3">
-              <span>RIG ANOMALY</span>
+              <span>ROBOT FLEET</span>
               <span className="text-blue-500">SIMULATOR</span>
             </h2>
           </div>
           <div className="font-mono-tech text-xs text-neutral-400 max-w-lg">
-            Interactive demonstration of Menna&apos;s real-time subsea & drilling telemetry model. Inject anomalous well conditions and observe sub-second neural classification.
+            Interactive demonstration of Menna&apos;s real-time autonomous robotics &amp; fleet telemetry model. Inject realistic robot mission conditions and observe sub-second neural classification.
           </div>
         </div>
 
@@ -132,7 +132,7 @@ export const AnomalySimulator: React.FC = () => {
                 <div className="flex items-center gap-2">
                   <Cpu className="w-4 h-4 text-blue-400" />
                   <span className="font-mono-tech font-bold text-xs uppercase text-neutral-200">
-                    Offshore SCADA Telemetry Input
+                    LIVE ROBOT FLEET TELEMETRY INPUT
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -149,7 +149,7 @@ export const AnomalySimulator: React.FC = () => {
               {/* Scenario Preset Buttons */}
               <div className="mb-6">
                 <span className="text-[10px] font-mono-tech text-neutral-400 uppercase tracking-wider block mb-2">
-                  Inject Realistic Well Scenarios:
+                  INJECT REALISTIC ROBOT MISSION SCENARIOS:
                 </span>
                 <div className="grid grid-cols-2 gap-2">
                   <button
@@ -160,8 +160,8 @@ export const AnomalySimulator: React.FC = () => {
                         : 'bg-white/5 border-white/10 text-neutral-300 hover:bg-white/10'
                     }`}
                   >
-                    <div className="font-bold">✓ Nominal Drilling</div>
-                    <div className="text-[10px] text-neutral-400">Baseline stability</div>
+                    <div className="font-bold">✓ Nominal Patrol</div>
+                    <div className="text-[10px] text-neutral-400">Baseline navigation</div>
                   </button>
 
                   <button
@@ -174,9 +174,9 @@ export const AnomalySimulator: React.FC = () => {
                   >
                     <div className="font-bold flex items-center gap-1 text-red-400">
                       <Flame className="w-3.5 h-3.5" />
-                      Gas Kick Influx
+                      Gas Leak Detection
                     </div>
-                    <div className="text-[10px] text-neutral-400">Pressure surge</div>
+                    <div className="text-[10px] text-neutral-400">Emergency response</div>
                   </button>
 
                   <button
@@ -187,8 +187,8 @@ export const AnomalySimulator: React.FC = () => {
                         : 'bg-white/5 border-white/10 text-neutral-300 hover:bg-white/10'
                     }`}
                   >
-                    <div className="font-bold text-amber-400">⚡ Stick-Slip Vibe</div>
-                    <div className="text-[10px] text-neutral-400">Bit harmonic stall</div>
+                    <div className="font-bold text-amber-400">⚡ Navigation Failure</div>
+                    <div className="text-[10px] text-neutral-400">SLAM obstacle stuck</div>
                   </button>
 
                   <button
@@ -199,19 +199,19 @@ export const AnomalySimulator: React.FC = () => {
                         : 'bg-white/5 border-white/10 text-neutral-300 hover:bg-white/10'
                     }`}
                   >
-                    <div className="font-bold text-cyan-400">◈ Subsea Choke Wear</div>
-                    <div className="text-[10px] text-neutral-400">Valve cavitation</div>
+                    <div className="font-bold text-cyan-400">◈ Sensor Degradation</div>
+                    <div className="text-[10px] text-neutral-400">Thermal camera failure</div>
                   </button>
                 </div>
               </div>
 
               {/* Sliders for Direct Parameter Tuning */}
               <div className="space-y-4">
-                {/* Standpipe Pressure */}
+                {/* Robot Battery & Signal Strength (RSSI) */}
                 <div>
                   <div className="flex justify-between text-xs font-mono-tech mb-1">
-                    <span className="text-neutral-400">Standpipe Pressure (SPP)</span>
-                    <span className="font-bold text-blue-400">{telemetry.pressure} PSI</span>
+                    <span className="text-neutral-400">Robot Battery &amp; Signal Strength (RSSI)</span>
+                    <span className="font-bold text-blue-400">{Math.round((telemetry.pressure / 5500) * 100)}% | -{Math.round(115 - (telemetry.pressure / 5500) * 55)} dBm</span>
                   </div>
                   <input
                     type="range"
@@ -226,23 +226,23 @@ export const AnomalySimulator: React.FC = () => {
                     className="w-full accent-blue-500 bg-neutral-800 h-1.5 rounded-lg appearance-none cursor-pointer"
                   />
                   <div className="flex justify-between text-[9px] font-mono-tech text-neutral-600 mt-0.5">
-                    <span>1,500 PSI (Low)</span>
-                    <span>Safe: 2,800-3,400</span>
-                    <span>5,500 PSI (Blowout Threshold)</span>
+                    <span>Low: 25% (-95 dBm)</span>
+                    <span>Safe: 60%-90% (-65 dBm)</span>
+                    <span>Full: 100% (-45 dBm)</span>
                   </div>
                 </div>
 
                 {/* Axial Vibration */}
                 <div>
                   <div className="flex justify-between text-xs font-mono-tech mb-1">
-                    <span className="text-neutral-400">Drillstring Vibration</span>
+                    <span className="text-neutral-400">Robot Chassis Vibration (IMU)</span>
                     <span className="font-bold text-amber-400">{telemetry.vibration} g</span>
                   </div>
                   <input
                     type="range"
                     min="0.2"
                     max="7.5"
-                    step="0.1"
+                    step="0.01"
                     value={telemetry.vibration}
                     onChange={(e) => {
                       setTelemetry({ ...telemetry, vibration: Number(e.target.value) });
@@ -252,7 +252,7 @@ export const AnomalySimulator: React.FC = () => {
                   />
                   <div className="flex justify-between text-[9px] font-mono-tech text-neutral-600 mt-0.5">
                     <span>0.2g (Smooth)</span>
-                    <span>Threshold: 3.5g</span>
+                    <span>Threshold: 3.0g</span>
                     <span>7.5g (Severe Hazard)</span>
                   </div>
                 </div>
@@ -260,8 +260,8 @@ export const AnomalySimulator: React.FC = () => {
                 {/* Torque */}
                 <div>
                   <div className="flex justify-between text-xs font-mono-tech mb-1">
-                    <span className="text-neutral-400">Surface Torque</span>
-                    <span className="font-bold text-cyan-400">{telemetry.torque} k ft-lbs</span>
+                    <span className="text-neutral-400">Drive Motor Torque</span>
+                    <span className="font-bold text-cyan-400">{telemetry.torque} Nm</span>
                   </div>
                   <input
                     type="range"
@@ -280,8 +280,8 @@ export const AnomalySimulator: React.FC = () => {
                 {/* Mud Flow Rate */}
                 <div>
                   <div className="flex justify-between text-xs font-mono-tech mb-1">
-                    <span className="text-neutral-400">Mud Pump Flow In</span>
-                    <span className="font-bold text-emerald-400">{telemetry.mudFlow} GPM</span>
+                    <span className="text-neutral-400">Autonomous Nav Speed</span>
+                    <span className="font-bold text-emerald-400">{((telemetry.mudFlow / 650) * 0.85).toFixed(2)} m/s</span>
                   </div>
                   <input
                     type="range"
@@ -300,8 +300,8 @@ export const AnomalySimulator: React.FC = () => {
             </div>
 
             <div className="pt-4 mt-6 border-t border-white/10 text-[11px] font-mono-tech text-neutral-500 flex items-center justify-between">
-              <span>Standard: WITSML 2.0 Ingest</span>
-              <span>Target: ENPPI Offshore Rigs</span>
+              <span>Standard: ROS2 / MQTT Telemetry Ingest</span>
+              <span>Target: Robot Fleet - Sector A</span>
             </div>
 
           </div>
@@ -315,7 +315,7 @@ export const AnomalySimulator: React.FC = () => {
                 <div className="flex items-center gap-2">
                   <Gauge className="w-4 h-4 text-blue-400" />
                   <span className="font-mono-tech font-bold text-xs uppercase text-neutral-200">
-                    Menna Sabah AI Inference Engine
+                    MENNA SABAH AI &amp; ROBOTICS
                   </span>
                 </div>
 
@@ -332,10 +332,10 @@ export const AnomalySimulator: React.FC = () => {
                   }`}></span>
                   <span>
                     {metrics.isCritical 
-                      ? 'CRITICAL WELL ANOMALY' 
+                      ? 'CRITICAL ROBOT FLEET HAZARD' 
                       : metrics.isWarning 
-                      ? 'ELEVATED DEGRADATION RISK' 
-                      : 'ALL DRILLING SYSTEMS OPTIMAL'}
+                      ? 'ELEVATED FLEET RISK' 
+                      : 'ALL ROBOTIC FLEET SYSTEMS NOMINAL'}
                   </span>
                 </div>
               </div>
@@ -354,7 +354,7 @@ export const AnomalySimulator: React.FC = () => {
                     {metrics.score.toFixed(1)}%
                   </div>
                   <div className="text-[10px] font-mono-tech text-neutral-500 mt-1">
-                    Threshold: 65.0%
+                    Threshold: 65.0% - AI Detected Fault
                   </div>
                 </div>
 
@@ -367,7 +367,7 @@ export const AnomalySimulator: React.FC = () => {
                     38 sec
                   </div>
                   <div className="text-[10px] font-mono-tech text-neutral-500 mt-1">
-                    Ahead of blowout limit
+                    Ahead of blowout limit (AI Early Warning)
                   </div>
                 </div>
 
@@ -380,7 +380,7 @@ export const AnomalySimulator: React.FC = () => {
                     $450K+
                   </div>
                   <div className="text-[10px] font-mono-tech text-neutral-500 mt-1">
-                    Per avoided tripping cycle
+                    Per avoided tripping cycle (Robotics Saved)
                   </div>
                 </div>
 
@@ -391,9 +391,9 @@ export const AnomalySimulator: React.FC = () => {
                 <div className="flex items-center justify-between text-xs font-mono-tech text-neutral-400 mb-2">
                   <span className="flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                    Neural Latent Anomaly Trend (Last 30s)
+                    AI Neural Anomaly Trend - Drilling Rig (Last 30s)
                   </span>
-                  <span className="text-[10px] text-neutral-500">Fast Fourier Transform (FFT)</span>
+                  <span className="text-[10px] text-neutral-500">AI Sensor Fusion - FFT Analysis (Robotics)</span>
                 </div>
 
                 <div className="h-28 w-full flex items-end gap-1 px-1 pt-2">
